@@ -1,11 +1,11 @@
 {
-  "name": "patchavatar-recipients",
+  "name": "patchmisc-recipients",
   "description": "",
   "version": "1.0.0",
-  "homepage": "https://github.com/dominictarr/patchavatar-recipients",
+  "homepage": "https://github.com/dominictarr/patchmisc-recipients",
   "repository": {
     "type": "git",
-    "url": "git://github.com/dominictarr/patchavatar-recipients.git"
+    "url": "git://github.com/dominictarr/patchmisc-recipients.git"
   },
   "dependencies": {
     "hyperscript": "^2.0.2",
