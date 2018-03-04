@@ -19,13 +19,18 @@ exports.create = function (api) {
     if(!data.value.content.recps) return
     return h('div.Avatar', data.value.content.recps.map(function (e) {
       e = isFeed(e) ? e : isFeed(e.link) ? e.link : null
-      if(e != api.identity.main() && e != data.value.author)
+      if(e != api.identity.main() && e != data.value.author) {
         //hmm: maybe link to private threads by this id?
-        return api.avatar.image(e)
+        var img = h('img')
+        
+        api.avatar.image(e, function (src) { img.src = src })
+        return img
+      }
     }).filter(Boolean))
 
   }}}
 }
+
 
 
 
