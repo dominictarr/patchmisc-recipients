@@ -16,7 +16,7 @@ exports.needs = {
 
 exports.create = function (api) {
   return { message: { meta: function (data) {
-    if(!data.value.content.recps) return
+    if(!Array.isArray(data.value.content.recps)) return
     return h('div.Avatar', data.value.content.recps.map(function (e) {
       e = isFeed(e) ? e : isFeed(e.link) ? e.link : null
       if(e != api.identity.main() && e != data.value.author) {
